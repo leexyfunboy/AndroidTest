@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Testarea</string>
+    <string name="in_mexico_string">Estoy en México</string>
+    <string name="in_washington_string">I\'m at the Washington Monument</string>
+
+    <string name="time_activity">固定时间刷新</string>
+    <string name="echart_activity">echart</string>
+    <string name="map_activity">地图测试</string>
+</resources>
