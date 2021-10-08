@@ -33,5 +33,41 @@
         tools:layout_editor_absoluteY="16dp"
         tools:ignore="MissingConstraints" />
 
+    <Button
+        android:id="@+id/menu_bt_04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mpChart_activity"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/menu_bt_05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/horizonCardview_activity"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/menu_bt_06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/datetime_activity"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/menu_bt_07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/surfaceview_activity"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
+
 
 </LinearLayout>

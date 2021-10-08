@@ -6,4 +6,8 @@
     <string name="time_activity">固定时间刷新</string>
     <string name="echart_activity">echart</string>
     <string name="map_activity">地图测试</string>
+    <string name="mpChart_activity">MPchart</string>
+    <string name="horizonCardview_activity">horizonCardview</string>
+    <string name="datetime_activity">Date-Time</string>
+    <string name="surfaceview_activity">Surfaceview</string>
 </resources>
