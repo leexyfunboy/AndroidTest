@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId "com.example.testarea"
         minSdkVersion 23
-        targetSdkVersion 30
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -35,15 +35,19 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
-    implementation files('libs\\Android_Map3D_SDK_V8.0.1_20210915.jar')
+    implementation files('D:\\android_files\\TestArea_git\\Testarea\\app\\libs\\AMap2DMap_6.0.0_AMapLocation_5.6.2_20211230.jar')
+    implementation files('D:\\always_libs\\gson-2.8.5.jar')
+    //    implementation files('libs/AMap3DMap_8.1.0_AMapLocation_5.6.1_20211115.jar')
+
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0' // ViewPager 2 需要使用 RecycleView 的 adapter
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
 
 //    compile fileTree(dir: 'libs', include: ['*.jar'])
 //    //3D地图so及jar

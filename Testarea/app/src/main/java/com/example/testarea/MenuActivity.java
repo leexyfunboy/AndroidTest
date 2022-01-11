@@ -21,6 +21,13 @@ public class MenuActivity extends AppCompatActivity {
     private Button bt_5;
     private Button bt_6;
     private Button bt_7;
+    private Button bt_8;
+    private Button bt_9;
+    private Button bt_10;
+    private Button bt_11;
+    private Button bt_12;
+    private Button bt_13;
+    private Button bt_14;
 
 
 
@@ -53,7 +60,13 @@ public class MenuActivity extends AppCompatActivity {
         bt_5 = findViewById(R.id.menu_bt_05);
         bt_6 = findViewById(R.id.menu_bt_06);
         bt_7 = findViewById(R.id.menu_bt_07);
-
+        bt_8 = findViewById(R.id.menu_bt_08);
+        bt_9 = findViewById(R.id.menu_bt_09);
+        bt_10 = findViewById(R.id.menu_bt_10);
+        bt_11 = findViewById(R.id.menu_bt_11);
+        bt_12 = findViewById(R.id.menu_bt_12);
+        bt_13 = findViewById(R.id.menu_bt_13);
+        bt_14 = findViewById(R.id.menu_bt_14);
     }
 
     public void initAction(){
@@ -63,8 +76,6 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this,TimeActivity.class);
                 startActivity(intent);
-
-
             }
         });
 
@@ -73,8 +84,6 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this,EchartActivity.class);
                 startActivity(intent);
-
-
             }
         });
 
@@ -83,8 +92,6 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this,MapActivity.class);
                 startActivity(intent);
-
-
             }
         });
 
@@ -93,8 +100,6 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this,MpchartActivity.class);
                 startActivity(intent);
-
-
             }
         });
 
@@ -122,5 +127,60 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
+        bt_8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this,PermissionActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        bt_9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this,BlueToothActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        bt_10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this,GpslocationActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        bt_11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this,SaveIdentityActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        bt_12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this,BroadcastreceiverActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        bt_13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this,TcpTest.class);
+                startActivity(intent);
+            }
+        });
+
+        bt_14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this,TakePhoto.class);
+                startActivity(intent);
+            }
+        });
     }
 }

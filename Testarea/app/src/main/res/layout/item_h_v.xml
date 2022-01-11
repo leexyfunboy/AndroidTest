@@ -5,11 +5,207 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_hv"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:textColor="#ffffff"
-        android:textSize="16sp" />
+        android:layout_height="match_parent">
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="aaaaa"/>-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/barchart_label_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" />
+                <TextView
+                    android:id="@+id/barchart_label_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" />
+                <TextView
+                    android:id="@+id/barchart_label_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" />
+                <TextView
+                    android:id="@+id/barchart_label_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" />
+                <TextView
+                    android:id="@+id/barchart_label_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" />
+                <TextView
+                    android:id="@+id/barchart_label_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" />
+                <TextView
+                    android:id="@+id/barchart_label_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" />
+                <TextView
+                    android:id="@+id/barchart_label_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" />
+                <TextView
+                    android:id="@+id/barchart_label_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" />
+                <TextView
+                    android:id="@+id/barchart_label_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" />
+                <TextView
+                    android:id="@+id/barchart_label_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" />
+                <TextView
+                    android:id="@+id/barchart_label_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" />
+                <TextView
+                    android:id="@+id/barchart_label_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" />
+                <TextView
+                    android:id="@+id/barchart_label_13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart_13"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" />
+                <TextView
+                    android:id="@+id/barchart_label_14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart_14"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" />
+                <TextView
+                    android:id="@+id/barchart_label_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" />
+                <TextView
+                    android:id="@+id/barchart_label_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/barchart_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bbbbb"/>
+
+
+    </androidx.cardview.widget.CardView>
 </LinearLayout>

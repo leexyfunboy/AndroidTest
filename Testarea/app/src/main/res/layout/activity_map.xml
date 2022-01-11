@@ -7,9 +7,69 @@
     android:orientation="vertical"
     tools:context=".MapActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/mapPage_tx_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="经度："/>
+
+        <TextView
+            android:id="@+id/mapPage_tx_latitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 
 
-    <com.amap.api.maps.MapView
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/mapPage_tx_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="纬度："/>
+
+        <TextView
+            android:id="@+id/mapPage_tx_longitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/mapPage_ed_locationName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入当前点位的名称" />
+
+    <Button
+        android:id="@+id/mapPage_bt_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存" />
+    <Button
+        android:id="@+id/mapPage_bt_exchangeMapType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="切换地图样式" />
+    <Button
+        android:id="@+id/mapPage_bt_toSaved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查看已保存" />
+
+
+    <com.amap.api.maps2d.MapView
         android:id="@+id/map"
         android:layout_width="match_parent"
         android:layout_height="400dp"/>

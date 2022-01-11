@@ -7,67 +7,123 @@
     android:orientation="vertical"
     tools:context=".MenuActivity">
 
-    <Button
-        android:id="@+id/menu_bt_01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/time_activity"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/menu_bt_02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/echart_activity"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:ignore="MissingConstraints" />
-    <Button
-        android:id="@+id/menu_bt_03"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/map_activity"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:ignore="MissingConstraints" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/menu_bt_04"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/mpChart_activity"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:ignore="MissingConstraints" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/menu_bt_05"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/horizonCardview_activity"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:ignore="MissingConstraints" />
+            <Button
+                android:id="@+id/menu_bt_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time_activity"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="158dp"
+                tools:layout_editor_absoluteY="16dp" />
 
-    <Button
-        android:id="@+id/menu_bt_06"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/datetime_activity"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:ignore="MissingConstraints" />
+            <Button
+                android:id="@+id/menu_bt_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/echart_activity"
+                tools:layout_editor_absoluteX="158dp"
+                tools:layout_editor_absoluteY="16dp"
+                tools:ignore="MissingConstraints" />
+            <Button
+                android:id="@+id/menu_bt_03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/map_activity"
+                tools:layout_editor_absoluteX="158dp"
+                tools:layout_editor_absoluteY="16dp"
+                tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/menu_bt_07"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/surfaceview_activity"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:ignore="MissingConstraints" />
+            <Button
+                android:id="@+id/menu_bt_04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mpChart_activity"
+                tools:layout_editor_absoluteX="158dp"
+                tools:layout_editor_absoluteY="16dp"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/menu_bt_05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/horizonCardview_activity"
+                tools:layout_editor_absoluteX="158dp"
+                tools:layout_editor_absoluteY="16dp"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/menu_bt_06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/datetime_activity"
+                tools:layout_editor_absoluteX="158dp"
+                tools:layout_editor_absoluteY="16dp"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/menu_bt_07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/surfaceview_activity"
+                tools:layout_editor_absoluteX="158dp"
+                tools:layout_editor_absoluteY="16dp"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/menu_bt_08"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/permission_activity" />
+            <Button
+                android:id="@+id/menu_bt_09"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="蓝牙" />
+
+            <Button
+                android:id="@+id/menu_bt_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="定位" />
+
+            <Button
+                android:id="@+id/menu_bt_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UUID_存储" />
+
+            <Button
+                android:id="@+id/menu_bt_12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BroadcaseReceiver" />
+
+            <Button
+                android:id="@+id/menu_bt_13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TcpTest" />
+
+            <Button
+                android:id="@+id/menu_bt_14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="拍照" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
 
 
 </LinearLayout>
