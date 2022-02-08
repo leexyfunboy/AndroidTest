@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId "com.example.testarea"
         minSdkVersion 23
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
 
@@ -48,6 +48,8 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.1.0' // ViewPager 2 需要使用 RecycleView 的 adapter
 
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
+    implementation 'org.greenrobot:eventbus:3.3.0'
 
 //    compile fileTree(dir: 'libs', include: ['*.jar'])
 //    //3D地图so及jar

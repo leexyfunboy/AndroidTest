@@ -181,4 +181,6 @@
 		定位诊断组件代码已上传到示例中心，git地址：https://github.com/amap-demo/android-location-diagnose.git
 	</string>
     <string name="startDiagnose">开始诊断</string>
+
+    <string name="unknown_device">Unknown device</string>
 </resources>

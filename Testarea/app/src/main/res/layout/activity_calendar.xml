@@ -34,12 +34,20 @@
             <AnalogClock
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></AnalogClock>
+
+            <Button
+                android:id="@+id/calendar_bt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="DatePicker"
                 android:textColor="@color/purple_500"/>
             <DatePicker
+                android:id="@+id/calendar_DatePicker"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></DatePicker>
             <TextView

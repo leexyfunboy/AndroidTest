@@ -11,8 +11,9 @@ public class BCReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 //获取到发送的广播的内容
-        String message = (String) intent.getBundleExtra("bundle").get("message");
-        Toast.makeText(context, "接收到发送的广播消息："+message, Toast.LENGTH_LONG).show();
-        Log.d("BCReceiver::get","收到");
+//        String message = (String) intent.getBundleExtra("bundle").get("message");
+//        Toast.makeText(context, "接收到发送的广播消息："+message, Toast.LENGTH_LONG).show();
+        int msg = intent.getIntExtra("abc",0);
+        Log.d("BCReceiver::get","收到"+msg);
     }
 }

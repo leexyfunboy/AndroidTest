@@ -5,30 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".BroadcastreceiverActivity">
+    tools:context=".EventbusActivity">
 
 
     <Button
-        android:id="@+id/BCReceiver_bt_01"
+        android:id="@+id/Eventbus_bt_01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="发送广播1" />
+        android:text="1.在主线程发送event" />
 
     <Button
-        android:id="@+id/BCReceiver_bt_02"
+        android:id="@+id/Eventbus_bt_02"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="发送广播2" />
+        android:text="2.从新建的线程发送event" />
 
     <Button
-        android:id="@+id/BCReceiver_bt_03"
+        android:id="@+id/Eventbus_bt_03"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="发送广播3" />
+        android:text="3.postSticky" />
 
     <Button
-        android:id="@+id/BCReceiver_bt_04"
+        android:id="@+id/Eventbus_bt_04"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="发送广播4" />
+        android:text="测试sticky" />
 </LinearLayout>

@@ -119,6 +119,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="拍照" />
+            <Button
+                android:id="@+id/menu_bt_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="蓝牙(官方流程)" />
+
+            <Button
+                android:id="@+id/menu_bt_16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notification通知" />
+
+            <Button
+                android:id="@+id/menu_bt_17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EventBus" />
 
         </LinearLayout>
     </ScrollView>

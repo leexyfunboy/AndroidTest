@@ -4,6 +4,7 @@
     package="com.example.testarea">
     <!-- 允许访问网络，必选权限 -->
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 允许获取粗略位置，若用GPS实现定位小蓝点功能则必选 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 允许获取设备和运营商信息，用于问题排查和网络定位，若无gps但仍需实现定位小蓝点功能则此权限必选 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 允许获取网络状态，用于网络定位，若无gps但仍需实现定位小蓝点功能则此权限必选 -->
@@ -22,8 +23,6 @@
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -41,10 +40,22 @@
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> <!-- 允许写入扩展存储，用于写入缓存定位数据 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许读设备等信息，用于问题排查 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
-    <uses-permission android:name="android.permission.CAMERA"/>
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--
+ If your app targets Android 9 or lower, you can declare
+         ACCESS_COARSE_LOCATION instead.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 设置required="true"声明应用仅适用于支持 BLE 的设备 -->
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -53,18 +64,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Testarea">
-        <activity android:name=".TakePhoto"></activity>
+        <activity android:name=".TestEventBus_Sticky"></activity>
+        <activity android:name=".EventbusActivity" />
+        <activity android:name=".NotificationTest" />
+
+        <service
+            android:name=".services.BluetoothLeService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".Bluetooth2" />
+        <activity android:name=".TakePhoto" />
         <activity android:name=".LocationList" />
         <activity android:name=".Retrofit_Test" />
         <activity android:name=".TcpTest" />
 
-        <service android:name="com.amap.api.location.APSService" />
-
-        <receiver
-            android:name=".MyReceiver"
-            android:enabled="true"
-            android:exported="true" />
-
+        <service android:name="com.amap.api.location.APSService" /> <!-- <receiver -->
+        <!-- android:name=".MyReceiver" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true" /> -->
         <activity android:name=".BroadcastreceiverActivity" />
         <activity android:name=".SaveIdentityActivity" />
         <activity android:name=".GpslocationActivity" />
@@ -85,7 +103,7 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter android:priority="1000">
-                <action android:name="android.intent.action.AIRPLANE_MODE" />
+                <action android:name="com.example.testarea.Utils.BCReceiver" />
             </intent-filter>
         </receiver>
 

@@ -5,11 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".EchartActivity">
+    tools:context=".TestEventBus_Sticky">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="EchartActivity" />
 </LinearLayout>
