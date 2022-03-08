@@ -22,7 +22,6 @@ public class EventbusActivity extends AppCompatActivity {
     private Button bt_03;
     private Button bt_04;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

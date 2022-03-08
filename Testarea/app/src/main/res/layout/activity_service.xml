@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ServiceAC">
+
+
+    <Button
+        android:id="@+id/bt_startService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="startService" />
+
+    <Button
+        android:id="@+id/bt_bindService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="bindService" />
+
+    <Button
+        android:id="@+id/bt_messengerService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="messengerService" />
+
+    <Button
+        android:id="@+id/bt_AIDLService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AIDLService" />
+
+    <Button
+        android:id="@+id/bt_TestIntentFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试隐式开启" />
+
+    <Button
+        android:id="@+id/bt_stop_startService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="stop_startService" />
+
+    <Button
+        android:id="@+id/bt_stopAllService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="stopAllService" />
+
+    <Button
+        android:id="@+id/bt_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="finish()" />
+</LinearLayout>

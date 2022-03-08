@@ -17,11 +17,39 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
+            <Button
+                android:id="@+id/menu_bt_netWorkPart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="网络相关"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="158dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <Button
+                android:id="@+id/menu_bt_Service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Service组件"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="158dp"
+                tools:layout_editor_absoluteY="16dp" />
+
             <Button
                 android:id="@+id/menu_bt_01"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/time_activity"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="158dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <Button
+                android:id="@+id/menu_bt_webView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WebView"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="158dp"
                 tools:layout_editor_absoluteY="16dp" />
@@ -136,6 +164,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="EventBus" />
+
+            <Button
+                android:id="@+id/menu_bt_18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AlertDialog" />
+
+            <Button
+                android:id="@+id/menu_bt_19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ProgressBar" />
+
+            <Button
+                android:id="@+id/menu_bt_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Retrofit2" />
 
         </LinearLayout>
     </ScrollView>

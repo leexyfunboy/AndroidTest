@@ -2,8 +2,10 @@ package com.example.testarea;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -15,36 +17,53 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.testarea.databinding.ActivityMenuBinding;
 import com.example.testarea.entity.EventMessage;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
+import xcrash.XCrash;
+
 public class MenuActivity extends AppCompatActivity {
 
-    private Button bt_1;
-    private Button bt_2;
-    private Button bt_3;
-    private Button bt_4;
-    private Button bt_5;
-    private Button bt_6;
-    private Button bt_7;
-    private Button bt_8;
-    private Button bt_9;
-    private Button bt_10;
-    private Button bt_11;
-    private Button bt_12;
-    private Button bt_13;
-    private Button bt_14;
-    private Button bt_15;
-    private Button bt_16;
-    private Button bt_17;
+//    private Button bt_1;
+//    private Button bt_2;
+//    private Button bt_3;
+//    private Button bt_4;
+//    private Button bt_5;
+//    private Button bt_6;
+//    private Button bt_7;
+//    private Button bt_8;
+//    private Button bt_9;
+//    private Button bt_10;
+//    private Button bt_11;
+//    private Button bt_12;
+//    private Button bt_13;
+//    private Button bt_14;
+//    private Button bt_15;
+//    private Button bt_16;
+//    private Button bt_17;
+//    private Button bt_18;
+//    private Button bt_19;
+
+
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(newBase);
+        XCrash.init(this);      //初始化Xcrash
+    }
+
+    private ActivityMenuBinding bonding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        bonding = ActivityMenuBinding.inflate(getLayoutInflater());
+        View view = bonding.getRoot();
+        setContentView(view);
         Log.d("MenuAc","onCreate()");
         createNotificationChannel();
 //        DisplayMetrics dm = new DisplayMetrics();
@@ -57,7 +76,7 @@ public class MenuActivity extends AppCompatActivity {
         System.out.println("高度："+height);
         System.out.println("宽度："+width);
 
-        initView();
+//        initView();
         initAction();
     }
 
@@ -68,7 +87,12 @@ public class MenuActivity extends AppCompatActivity {
         if(!EventBus.getDefault().isRegistered(this)){
             EventBus.getDefault().register(this);
         }
+    }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("MenuAc","onReStart()");
     }
 
     @Override
@@ -137,29 +161,55 @@ public class MenuActivity extends AppCompatActivity {
         }
     }
 
-    public void initView(){
-        bt_1 = findViewById(R.id.menu_bt_01);
-        bt_2 = findViewById(R.id.menu_bt_02);
-        bt_3 = findViewById(R.id.menu_bt_03);
-        bt_4 = findViewById(R.id.menu_bt_04);
-        bt_5 = findViewById(R.id.menu_bt_05);
-        bt_6 = findViewById(R.id.menu_bt_06);
-        bt_7 = findViewById(R.id.menu_bt_07);
-        bt_8 = findViewById(R.id.menu_bt_08);
-        bt_9 = findViewById(R.id.menu_bt_09);
-        bt_10 = findViewById(R.id.menu_bt_10);
-        bt_11 = findViewById(R.id.menu_bt_11);
-        bt_12 = findViewById(R.id.menu_bt_12);
-        bt_13 = findViewById(R.id.menu_bt_13);
-        bt_14 = findViewById(R.id.menu_bt_14);
-        bt_15 = findViewById(R.id.menu_bt_15);
-        bt_16 = findViewById(R.id.menu_bt_16);
-        bt_17 = findViewById(R.id.menu_bt_17);
-    }
+//    public void initView(){
+//        bt_1 = findViewById(R.id.menu_bt_01);
+//        bt_2 = findViewById(R.id.menu_bt_02);
+//        bt_3 = findViewById(R.id.menu_bt_03);
+//        bt_4 = findViewById(R.id.menu_bt_04);
+//        bt_5 = findViewById(R.id.menu_bt_05);
+//        bt_6 = findViewById(R.id.menu_bt_06);
+//        bt_7 = findViewById(R.id.menu_bt_07);
+//        bt_8 = findViewById(R.id.menu_bt_08);
+//        bt_9 = findViewById(R.id.menu_bt_09);
+//        bt_10 = findViewById(R.id.menu_bt_10);
+//        bt_11 = findViewById(R.id.menu_bt_11);
+//        bt_12 = findViewById(R.id.menu_bt_12);
+//        bt_13 = findViewById(R.id.menu_bt_13);
+//        bt_14 = findViewById(R.id.menu_bt_14);
+//        bt_15 = findViewById(R.id.menu_bt_15);
+//        bt_16 = findViewById(R.id.menu_bt_16);
+//        bt_17 = findViewById(R.id.menu_bt_17);
+//        bt_18 = findViewById(R.id.menu_bt_18);
+//        bt_19 = findViewById(R.id.menu_bt_19);
+//    }
 
     public void initAction(){
 
-        bt_1.setOnClickListener(new View.OnClickListener() {
+        bonding.menuBtNetWorkPart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this,NetworkpartAC.class);
+                startActivity(intent);
+            }
+        });
+
+        bonding.menuBtService.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this,ServiceAC.class);
+                startActivity(intent);
+            }
+        });
+
+        bonding.menuBtWebView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this,WebviewAC.class);
+                startActivity(intent);
+            }
+        });
+
+        bonding.menuBt01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this,TimeActivity.class);
@@ -167,7 +217,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        bt_2.setOnClickListener(new View.OnClickListener() {
+        bonding.menuBt02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this,EchartActivity.class);
@@ -175,7 +225,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        bt_3.setOnClickListener(new View.OnClickListener() {
+        bonding.menuBt03.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this,MapActivity.class);
@@ -183,7 +233,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        bt_4.setOnClickListener(new View.OnClickListener() {
+        bonding.menuBt04.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this,MpchartActivity.class);
@@ -191,7 +241,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        bt_5.setOnClickListener(new View.OnClickListener() {
+        bonding.menuBt05.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this,horizonViewActivity.class);
@@ -199,7 +249,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        bt_6.setOnClickListener(new View.OnClickListener() {
+        bonding.menuBt06.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this,CalendarActivity.class);
@@ -207,7 +257,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        bt_7.setOnClickListener(new View.OnClickListener() {
+        bonding.menuBt07.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this,SurfaceviewActivity.class);
@@ -215,7 +265,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        bt_8.setOnClickListener(new View.OnClickListener() {
+        bonding.menuBt08.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this,PermissionActivity.class);
@@ -223,7 +273,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        bt_9.setOnClickListener(new View.OnClickListener() {
+        bonding.menuBt09.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this,BlueToothActivity.class);
@@ -231,7 +281,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        bt_10.setOnClickListener(new View.OnClickListener() {
+        bonding.menuBt10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this,GpslocationActivity.class);
@@ -239,7 +289,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        bt_11.setOnClickListener(new View.OnClickListener() {
+        bonding.menuBt11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this,SaveIdentityActivity.class);
@@ -247,7 +297,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        bt_12.setOnClickListener(new View.OnClickListener() {
+        bonding.menuBt12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this,BroadcastreceiverActivity.class);
@@ -255,7 +305,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        bt_13.setOnClickListener(new View.OnClickListener() {
+        bonding.menuBt13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this,TcpTest.class);
@@ -263,7 +313,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        bt_14.setOnClickListener(new View.OnClickListener() {
+        bonding.menuBt14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this,TakePhoto.class);
@@ -271,7 +321,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        bt_15.setOnClickListener(new View.OnClickListener() {
+        bonding.menuBt15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this,Bluetooth2.class);
@@ -279,7 +329,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        bt_16.setOnClickListener(new View.OnClickListener() {
+        bonding.menuBt16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this,NotificationTest.class);
@@ -287,10 +337,34 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        bt_17.setOnClickListener(new View.OnClickListener() {
+        bonding.menuBt17.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuActivity.this,EventbusActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        bonding.menuBt18.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this,AlertdialogAC.class);
+                startActivity(intent);
+            }
+        });
+
+        bonding.menuBt19.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this,ProgressBarAC.class);
+                startActivity(intent);
+            }
+        });
+
+        bonding.menuBt20.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuActivity.this,Retrofit_Test.class);
                 startActivity(intent);
             }
         });

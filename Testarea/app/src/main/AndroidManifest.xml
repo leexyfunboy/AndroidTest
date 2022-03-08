@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.testarea">
+
     <!-- 允许访问网络，必选权限 -->
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
@@ -63,8 +64,42 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Testarea">
-        <activity android:name=".TestEventBus_Sticky"></activity>
+        android:theme="@style/Theme.Testarea"
+        android:usesCleartextTraffic="true">
+        <service
+            android:name=".services.PersonService"
+            android:enabled="true"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="com.example.testarea.services"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+        </service>
+        <service
+            android:name=".services.ServiceMessenger"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ServiceAC" />
+
+        <service
+            android:name=".services.MyService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.testarea.services.MyService" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".WebviewAC" />
+        <activity android:name=".NetworkpartAC" />
+        <activity android:name=".ProgressBarAC" />
+        <activity android:name=".AlertdialogAC" />
+        <activity android:name=".TestEventBus_Sticky" />
         <activity android:name=".EventbusActivity" />
         <activity android:name=".NotificationTest" />
 
@@ -80,9 +115,6 @@
         <activity android:name=".TcpTest" />
 
         <service android:name="com.amap.api.location.APSService" /> <!-- <receiver -->
-        <!-- android:name=".MyReceiver" -->
-        <!-- android:enabled="true" -->
-        <!-- android:exported="true" /> -->
         <activity android:name=".BroadcastreceiverActivity" />
         <activity android:name=".SaveIdentityActivity" />
         <activity android:name=".GpslocationActivity" />

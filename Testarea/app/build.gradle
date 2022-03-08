@@ -27,6 +27,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -36,7 +40,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
     implementation files('D:\\android_files\\TestArea_git\\Testarea\\app\\libs\\AMap2DMap_6.0.0_AMapLocation_5.6.2_20211230.jar')
-    implementation files('D:\\always_libs\\gson-2.8.5.jar')
+    implementation files('D:\\always_libs\\mysql-connector-java-8.0.26.jar')
     //    implementation files('libs/AMap3DMap_8.1.0_AMapLocation_5.6.1_20211115.jar')
 
     testImplementation 'junit:junit:4.+'
@@ -47,9 +51,16 @@ dependencies {
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0' // ViewPager 2 需要使用 RecycleView 的 adapter
 
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+//    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
 
     implementation 'org.greenrobot:eventbus:3.3.0'
+
+    implementation 'com.iqiyi.xcrash:xcrash-android-lib:3.0.0'
+
+
 
 //    compile fileTree(dir: 'libs', include: ['*.jar'])
 //    //3D地图so及jar
